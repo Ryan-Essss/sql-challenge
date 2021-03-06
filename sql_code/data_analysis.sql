@@ -14,7 +14,7 @@ SELECT employees.emp_no,
 	   employees.sex, 
 	   salaries.salary
   FROM salaries
- INNER JOIN employees ON employees.emp_no=salaries.emp_no
+ INNER JOIN employees ON employees.emp_no=salaries.emp_no;
 
 -- 2. List first name, last name, and hire date for employees who were hired in 1986.
 SELECT first_name, last_name, hire_date FROM employees
@@ -51,8 +51,8 @@ SELECT departments.dept_name,
 	   employees.last_name,
 	   employees.first_name
   FROM dept_emp
- INNER JOIN employees ON dept_emp.emp_no = employees.emp_no 
- INNER JOIN departments ON dept_emp.dept_no = departments.dept_no
+  LEFT JOIN employees ON dept_emp.emp_no = employees.emp_no 
+  LEFT JOIN departments ON dept_emp.dept_no = departments.dept_no
  WHERE departments.dept_no = 'd007';
  
 -- 7. List all employees in the Sales and Development departments, including their employee number, 
@@ -62,12 +62,12 @@ SELECT departments.dept_name,
 	   employees.last_name,
 	   employees.first_name
   FROM dept_emp
- INNER JOIN employees ON dept_emp.emp_no = employees.emp_no 
- INNER JOIN departments ON dept_emp.dept_no = departments.dept_no
- WHERE departments.dept_no = 'd007' OR departments.dept_no = 'd005';  
+  LEFT JOIN employees ON dept_emp.emp_no = employees.emp_no 
+  LEFT JOIN departments ON dept_emp.dept_no = departments.dept_no
+ WHERE departments.dept_no = 'd007' OR departments.dept_no = 'd005';   
  
 -- 8. In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
-SELECT last_name, COUNT(last_name)AS Frequency
+SELECT last_name, COUNT(last_name)AS Frequency_Count
   FROM employees
  GROUP BY last_name
  ORDER BY COUNT(last_name) DESC;

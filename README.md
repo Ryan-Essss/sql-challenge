@@ -14,16 +14,16 @@ It is a beautiful spring day, and it is two weeks since you have been hired as a
 - postgreSQL 11
 - quickdatabasediagrams.com
 
-### Scope of Work
+## Scope of Work
 
-### Data Modeling
+#### Data Modeling
 Inspected CSVs and created and ERD of the tables.
 
-### Data Engineering
+#### Data Engineering
 Created a table schema for each of the six CSV files using Primary, Composite, and Foreign Keys.  Imported
 all CSV files into the corresponding SQL table.
 
-### Data Analysis
+#### Data Analysis
 1. List the following details of each employee: employee number, last name, first name, sex, and salary.
 2. List first name, last name, and hire date for employees who were hired in 1986.
 3. List the manager of each department with the following information: department number, department name,          the manager's employee number, last name, first name.

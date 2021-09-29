@@ -20,7 +20,7 @@ It is a beautiful spring day, and it is two weeks since you have been hired as a
 ## Scope of Work
 
 #### Data Modeling
-Inspected CSVs and created and ERD of the tables.
+Inspected CSVs and created an ERD of the tables.
 
 #### Data Engineering
 Created a table schema for each of the six CSV files using Primary, Composite, and Foreign Keys.  Imported
